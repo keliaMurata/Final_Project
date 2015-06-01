@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxLeapMotion2\src\ofxLeapMotion2.cpp">
+			<Filter>addons\ofxLeapMotion2\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxLeapMotion2">
+			<UniqueIdentifier>{3495A605-88B6-E143-E79F-BC0C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxLeapMotion2\src">
+			<UniqueIdentifier>{DCB14B88-7C0C-1705-F48C-5B80}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxLeapMotion2\libs">
+			<UniqueIdentifier>{A340EBFF-11BD-59ED-D6A7-8DFE}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxLeapMotion2\libs\include">
+			<UniqueIdentifier>{7156F9B7-1D7B-A2C1-9EC3-E7CF}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxLeapMotion2\src\ofxLeapMotion2.h">
+			<Filter>addons\ofxLeapMotion2\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxLeapMotion2\libs\include\Leap.h">
+			<Filter>addons\ofxLeapMotion2\libs\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxLeapMotion2\libs\include\LeapMath.h">
+			<Filter>addons\ofxLeapMotion2\libs\include</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>
