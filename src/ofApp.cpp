@@ -3,14 +3,10 @@
 /* 
 Basic leap set up and controls curtousy of the Leap ofx addon example library. 
 
-Time delay and fame storing code written by Kelia Murata
-Project: 
-In oder to empower one must first educate. I wrote this program in th hopes to help others understand some of the struggles faced by
-individuals that have suffered strokes and lost the ability to completely control their limbs.  Brain damage can occur quickly when 
-blood flow is restricted or cut off from different areas in the brain, causing irreversable damage to outer body functions such as 
-motor, speech and concentration abilities.  This program will simulate the disjunct, delay and struggle between the sitmuli in the brain
-(the input to the leap controler) and the movement in the limb itself (the displayed output) 
+Time delay and frame storing code written by Kelia Murata 
 
+An empowerment program to enlighten users to the struggles of stroke victims and their struggles with damanged brain control of motor functions 
+especially with fine motor skills like hand control. 
  */
 
 //--------------------------------------------------------------
@@ -86,7 +82,7 @@ void ofApp::update()
 		leap.setMappingZ(-150, 150, -200, 200);
 	}
 	
-	//IMPORTANT! - tell ofxLeapMotion that the frame is no longer new.
+	//mark frame as old 
 	leap.markFrameAsOld();
 }
 
@@ -99,6 +95,14 @@ void ofApp::draw()
 	//sets the color of the string 
 	ofSetColor(200);
 	ofDrawBitmapString("ofxLeapMotion - Example App\nLeap Connected? " + ofToString(leap.isConnected()), 20, 20);
+	if(trigger == false)
+	{
+		ofDrawBitmapString("Delay hand running? No" , 20, 45);
+	}
+	if(trigger == true)
+	{
+		ofDrawBitmapString("Delay hand running? Yes" , 20, 45);
+	}
     
 	//starts camera 
 	cam.begin();
@@ -156,6 +160,7 @@ void ofApp::draw()
 		//only updates the delay hand every 3 frames 
 		if(ofGetFrameNum() % 3 == 0) delayedTime++; // if the frame rate counter is equally divisable by 3
 		
+
 		bool isLeft        = delayHands[delayedTime][hands].isLeft;
 		ofPoint handPos    = delayHands[delayedTime][hands].handPos;
 		ofPoint handNormal = delayHands[delayedTime][hands].handNormal;
